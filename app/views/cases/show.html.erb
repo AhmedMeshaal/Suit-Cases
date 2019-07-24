@@ -1,0 +1,26 @@
+<p>
+  <strong>Subject:</strong>
+  <%= @case.subject %>
+</p>
+ 
+<p>
+  <strong>Details:</strong>
+  <%= @case.detail %>
+</p>
+
+<p>
+  <strong>Opposing Lawyer:</strong>
+  <%= @case.opposing_lawyer %>
+</p>
+
+<% if @case.status == true %>
+<p>
+Case reserved by <%= User.find(Case.find(@case.id).lawyer).email %>
+</p>
+<%end%>
+
+<%= link_to 'Edit', edit_case_path(@case), class: "btn btn-success" %> |
+<%= link_to 'Back', cases_path, class: "btn btn-danger" %> |
+<% if @case.status == false && current_user.role == "lawyer" %>
+<%= link_to 'Accept', "/cases/#{@case.id}/accepeted", class: "btn btn-danger" %>
+<% end %>

@@ -1,0 +1,29 @@
+
+<%= form_for @case do |form| %>
+
+
+    
+  <div class="col-lg-4 col-sm-12">
+  <div class="field form-group">
+    <p>
+      <%= form.label :subject %><br>
+      <%= form.text_field :subject, class: "form-control", required: true %>
+    </p>
+   
+    <p>
+      <%= form.label :detail %><br>
+      <%= form.text_area :detail, class: "form-control", required: true %>
+    </p>
+
+    <p>
+      <%= form.label :opposing_lawyer %><br>
+      <%= form.text_area :opposing_lawyer, class: "form-control", required: true %>
+    </p>
+   
+    <p>
+      <%= form.submit class: "btn btn-dark" %>
+    </p>
+
+    </div>
+    </div>
+  <% end %>

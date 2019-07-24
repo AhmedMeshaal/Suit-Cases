@@ -1,0 +1,18 @@
+<p>
+  <strong>E-mail:</strong>
+  <%= @case.user.email %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @case.user.name %>
+</p>
+
+<p>
+  <strong>Bio:</strong>
+  <%= @case.user.bio %>
+</p>
+
+<%= image_tag(@case.user.image, size: "100x100", alt: "User Image") %>
+
+<%= link_to 'Back', cases_path, class: "btn btn-danger" %>

@@ -1,0 +1,25 @@
+.flex-start {
+    display: flex;
+    -webkit-align-items: flex-start;
+  align-items: flex-start; 
+    margin-top: 30px;
+}
+
+.flex-end {
+    display: flex;
+    -webkit-align-items: flex-end; 
+  align-items: flex-end;
+}
+
+.radios {
+    margin-left: 15px;
+}
+h2 {
+    font-family: "Gill Sans", sans-serif;
+    margin-left: 15px;
+    font-size: 40px;
+}
+
+.btn-lg{
+    margin-top: 10px;
+}
