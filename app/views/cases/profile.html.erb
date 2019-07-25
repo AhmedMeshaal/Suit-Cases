@@ -1,3 +1,9 @@
+<div class="container">
+<div class="fb-profile">
+
+
+<%= image_tag(@case.user.image, size: "400x200", alt: "User Image", class: "fb-image-profile thumbnail") %>
+
 <p>
   <strong>E-mail:</strong>
   <%= @case.user.email %>
@@ -13,6 +19,6 @@
   <%= @case.user.bio %>
 </p>
 
-<%= image_tag(@case.user.image, size: "100x100", alt: "User Image") %>
-
 <%= link_to 'Back', cases_path, class: "btn btn-danger" %>
+</div>
+</div>

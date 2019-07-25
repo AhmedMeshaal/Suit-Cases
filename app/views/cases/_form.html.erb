@@ -5,23 +5,24 @@
     
   <div class="col-lg-4 col-sm-12">
   <div class="field form-group">
-    <p>
+    <p class="mform">
       <%= form.label :subject %><br>
       <%= form.text_field :subject, class: "form-control", required: true %>
     </p>
    
-    <p>
+    <p class="mform">
       <%= form.label :detail %><br>
       <%= form.text_area :detail, class: "form-control", required: true %>
     </p>
 
-    <p>
+    <p class="mform"> 
       <%= form.label :opposing_lawyer %><br>
-      <%= form.text_area :opposing_lawyer, class: "form-control", required: true %>
+      <%= form.text_field :opposing_lawyer, class: "form-control", required: true %>
     </p>
    
-    <p>
-      <%= form.submit class: "btn btn-dark" %>
+    <p class="mform">
+      <%= form.submit class: "btn btn-info" %>
+      <%= link_to 'Back', cases_path, class: "btn btn-danger" %>
     </p>
 
     </div>

@@ -1,16 +1,18 @@
+<div class="container">
+<div class="content"
 <p>
-  <strong>Subject:</strong>
-  <%= @case.subject %>
+  <strong>Case Subject:</strong>
+ <h1 id="sbj"> <%= @case.subject %></h1>
 </p>
  
 <p>
-  <strong>Details:</strong>
-  <%= @case.detail %>
+  <strong>Case Details:</strong>
+  <h3> <%= @case.detail %> </h3>
 </p>
 
 <p>
   <strong>Opposing Lawyer:</strong>
-  <%= @case.opposing_lawyer %>
+  <h4> <%= @case.opposing_lawyer %> </h4>
 </p>
 
 <% if @case.status == true %>
@@ -18,9 +20,11 @@
 Case reserved by <%= User.find(Case.find(@case.id).lawyer).email %>
 </p>
 <%end%>
+</div>
 
 <%= link_to 'Edit', edit_case_path(@case), class: "btn btn-success" %> |
 <%= link_to 'Back', cases_path, class: "btn btn-danger" %> |
 <% if @case.status == false && current_user.role == "lawyer" %>
 <%= link_to 'Accept', "/cases/#{@case.id}/accepeted", class: "btn btn-danger" %>
 <% end %>
+</div>

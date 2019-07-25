@@ -19,24 +19,32 @@ class CasesController < ApplicationController
          end
 
       def new
-        # if current_user.role == "lawyer"
-        # else 
-        #     redirect_to root_path
         @case = Case.new
-      end
+        if current_user.role == "client"
+        else 
+        redirect_to root_path
+        end
+    end
      
     
 
       def edit 
         @case = Case.find(params[:id])
+        if current_user.role == "client"
+        else 
+        redirect_to root_path
+        end
         end
       
     def create
-        puts params
+      
+
+      puts params
        ca = Case.new(case_params)
        ca.user_id = current_user.id
         ca.save
         redirect_to cases_path
+        
         end
 
     def update
@@ -46,11 +54,10 @@ class CasesController < ApplicationController
             
         redirect_to cases_path
         
-        # if @cases.update(case_params)
-        #   redirect_to cases_path
-        # else
-        #   render 'edit'
-        # end
+        if current_user.role == "client"
+        else 
+        redirect_to root_path
+        end
       end
 
       def accept

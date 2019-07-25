@@ -1,0 +1,28 @@
+<div class="container">
+<h1>All the Lawyers</h1>
+
+
+
+<table class="striped bordered" >
+  <tr class="lawyers">
+    <th >Lawyer Name</th>
+    <th >Image</th>
+    <th >Experiance</th>
+    <th >bio</th>
+    <th >E-mail</th>
+  </tr>
+
+  <% @lawyers.each do |lawyer| %>
+      <tr>
+        <td><%= lawyer.name %></td>
+        <td><%= image_tag(lawyer.img, size: "150x100", alt: "Lawyer Image") %></td>
+        <td><%= lawyer.experiance %></td>
+        <td><%= lawyer.bio %></td>
+        <td><%= lawyer.mail %></td>
+        
+        
+        
+      </tr>
+  <% end %>
+</table>
+</div>

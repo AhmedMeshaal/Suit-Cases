@@ -1,7 +1,7 @@
-<h1>Listing cases</h1>
+<div class="container">
+
+<h1>cases list</h1>
  
-
-
 
 <table class="table table-striped table-hover" id="cases-table">
   <thead class="thead-dark">
@@ -22,16 +22,18 @@
       <td><%= cases.opposing_lawyer %></td>
       
 
-      <td><%= link_to 'Show', case_path(cases) %></td>
+      <td><%= link_to 'Show', case_path(cases), class: 'btn btn-warning btn-round btn-just-icon btn-sm' %></td>
       
       <% if current_user.id == cases.user_id %>
-      <td><%= link_to 'Edit', edit_case_path(cases) %></td>
-      <td><%= link_to 'Profile', cases_profile_path(cases) %></td>
+      <td><%= link_to 'Edit', edit_case_path(cases), class: 'btn btn-success btn-round btn-just-icon btn-sm' %></td>
+      <td><%= link_to 'Profile', cases_profile_path(cases), class: 'btn btn-info btn-round btn-just-icon btn-sm' %></td>
       <td><%= link_to 'Destroy', case_path(cases),
               method: :delete,
-              data: { confirm: 'Are you sure?' } %></td>
+              data: { confirm: 'Are you sure?' }, class: 'btn btn-danger btn-round btn-just-icon btn-sm' %></td>
               <% end%>
       
     </tr>
   <% end %>
 </table>
+
+</div>
