@@ -5,6 +5,8 @@ gem "devise"
 
 gem "bootstrap-sass"
 
+gem 'jquery-rails'
+
 ruby '2.6.1'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
