@@ -17,7 +17,7 @@
 
 <% if @case.status == true %>
 <p>
-Case reserved by <%= User.find(Case.find(@case.id).lawyer).email %>
+Case reserved by <%= User.find(Case.find(@case.id).lawyer).name %>
 </p>
 <%end%>
 </div>
