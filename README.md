@@ -1,24 +1,23 @@
-# README
+# Project Name
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Suits - is a law firm website can serve both clients and lawyers. 
 
-Things you may want to cover:
+## Website URL 
 
-* Ruby version
+Click the website name >> [SUITS](https://suitsproject.herokuapp.com/) to access it.
 
-* System dependencies
+## Website Idea
 
-* Configuration
+The website enables the clients to post their cases on the website where the registered lawyers will take a look on all cases then will choose which case he/she thinks is appropriate and can be solved by him/his.
 
-* Database creation
+## The programming Language 
 
-* Database initialization
+This project is builded using Ruby on rails framework.
 
-* How to run the test suite
+## Contributing
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
-* Services (job queues, cache servers, search engines, etc.)
+Please make sure to update tests as appropriate.
 
-* Deployment instructions
-
-* ...
+## License
+[MIT](https://choosealicense.com/licenses/mit/)
